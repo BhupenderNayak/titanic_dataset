@@ -102,3 +102,76 @@ The model trained quickly and showed stable validation accuracy, proving the `Dr
 * **Feature Engineering is King:** A model is only as good as its data. Cleaning, filling, and encoding data (like `Age` and `Sex`) is the most important part of the process.
 * **Preventing Overfitting is Critical:** With a small dataset, a deep learning model will memorize it very quickly. Using `Dropout` and `EarlyStopping` was essential to building a model that could generalize to new data.
 * **Data Scaling Matters:** `StandardScaler` made a noticeable difference in how quickly and stably the model trained.
+
+afterwards i created this 
+⚙️ Tech Stack & Libraries Used
+
+Python 🐍
+
+Pandas – for data manipulation and analysis
+
+NumPy – for numerical operations
+
+Scikit-learn – for preprocessing and pipeline building
+
+XGBoost – for model training and boosting performance
+
+Matplotlib / Seaborn (optional) – for visualizations
+
+🧩 Machine Learning Pipeline Components
+
+Imputer (SimpleImputer) – fills missing values with mean/most frequent values
+
+OneHotEncoder – encodes categorical variables into numerical form
+
+StandardScaler – standardizes numerical features
+
+ColumnTransformer – applies transformations to specific columns
+
+Pipeline – connects preprocessing and model training in one workflow
+
+XGBClassifier – trains a gradient boosting model for classification
+
+🧾 Steps Performed
+
+Loaded the Titanic dataset (train.csv)
+
+Separated features and target variable (Survived)
+
+Handled missing data using SimpleImputer
+
+Applied encoding using OneHotEncoder for categorical columns
+
+Normalized numeric columns with StandardScaler
+
+Built a preprocessing + XGBoost pipeline
+
+Trained and evaluated the model using train_test_split and accuracy_score
+
+📊 Results
+
+The model achieved strong accuracy using XGBoost after proper preprocessing.
+
+The pipeline ensures clean, repeatable, and automated ML workflows.
+
+🧰 Requirements
+
+Install the dependencies:
+
+pip install numpy pandas scikit-learn xgboost
+
+📁 Dataset
+
+Source: Kaggle Titanic Dataset
+
+File used: train.csv
+
+💡 Future Improvements
+
+Perform hyperparameter tuning for XGBoost
+
+Add feature importance visualization
+
+Test on unseen (test.csv) dataset
+
+Deploy model using Flask or Streamlit
